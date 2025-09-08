@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBook - Online Movie Ticket Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-film"></i>
+                <span>CineBook</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Theaters</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-login" id="loginBtn">Login</button>
+                <button class="btn btn-signup" id="signupBtn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Movie Experience</h1>
+            <p>Discover the latest blockbusters and book your tickets in just a few clicks. Enjoy a seamless movie booking experience with instant confirmations.</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search for movies, theaters, or locations...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Now Showing Movies -->
+    <section class="container">
+        <h2 class="section-title">Now Showing</h2>
+        <div class="movie-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="action">Action</button>
+            <button class="filter-btn" data-filter="comedy">Comedy</button>
+            <button class="filter-btn" data-filter="drama">Drama</button>
+            <button class="filter-btn" data-filter="sci-fi">Sci-Fi</button>
+        </div>
+        <div class="movie-grid">
+            <!-- Action Movies -->
+            <div class="movie-card" data-category="action">
+                <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Spider-Man: No Way Home" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Spider-Man: No Way Home</h3>
+                    <div class="movie-details">
+                        <span>2h 28m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 8.8</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <div class="movie-card" data-category="action">
+                <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Dune" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Dune: Part Two</h3>
+                    <div class="movie-details">
+                        <span>2h 46m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 9.0</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <!-- Comedy Movies -->
+            <div class="movie-card" data-category="comedy">
+                <img src="https://images.unsplash.com/photo-1574787525145-5c00179cd526?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="The Hangover" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Hangover</h3>
+                    <div class="movie-details">
+                        <span>1h 40m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 7.7</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <div class="movie-card" data-category="comedy">
+                <img src="https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Superbad" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Superbad</h3>
+                    <div class="movie-details">
+                        <span>1h 53m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 7.6</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <!-- Drama Movies -->
+            <div class="movie-card" data-category="drama">
+                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="The Shawshank Redemption" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Shawshank Redemption</h3>
+                    <div class="movie-details">
+                        <span>2h 22m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 9.3</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <div class="movie-card" data-category="drama">
+                <img src="https://images.unsplash.com/photo-1489599102910-59206b8ca314?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Forrest Gump" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Forrest Gump</h3>
+                    <div class="movie-details">
+                        <span>2h 22m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 8.8</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <!-- Additional Movies -->
+            <div class="movie-card" data-category="action">
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="The Batman" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Batman</h3>
+                    <div class="movie-details">
+                        <span>2h 56m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 8.5</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+            
+            <div class="movie-card" data-category="sci-fi">
+                <img src="https://images.unsplash.com/photo-1598890779130-9bb7d0e7912f?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Black Widow" class="movie-poster">
+                <div class="movie-info">
+                    <h3 class="movie-title">Black Widow</h3>
+                    <div class="movie-details">
+                        <span>2h 14m</span>
+                        <span class="movie-rating"><i class="fas fa-star"></i> 7.8</span>
+                    </div>
+                    <button class="btn-book">Book Tickets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seat Selection Process -->
+    <section class="container">
+        <h2 class="section-title">Book Your Seats</h2>
+        
+        <div class="booking-process" id="bookingProcess">
+            <div class="process-header">
+                <h3>Spider-Man: No Way Home</h3>
+                <p>Friday, June 15 • 7:30 PM • Cineplex Downtown</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Select Seats</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Payment</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Confirmation</div>
+                </div>
+            </div>
+            
+            <div class="screen-container">
+                <div class="screen">SCREEN</div>
+                
+                <div class="seats-container">
+                    <!-- Seats will be generated with JavaScript -->
+                </div>
+                
+                <div class="seat-info">
+                    <div class="seat-info-item">
+                        <div class="seat-sample" style="background-color: #475569;"></div>
+                        <span>Available</span>
+                    </div>
+                    <div class="seat-info-item">
+                        <div class="seat-sample" style="background-color: #f97316;"></div>
+                        <span>Selected</span>
+                    </div>
+                    <div class="seat-info-item">
+                        <div class="seat-sample" style="background-color: #dc2626;"></div>
+                        <span>Occupied</span>
+                    </div>
+                    <div class="seat-info-item">
+                        <div class="seat-sample" style="background-color: #7e22ce;"></div>
+                        <span>VIP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="booking-summary">
+                <h3>Booking Summary</h3>
+                <div class="summary-item">
+                    <span>Seats (2):</span>
+                    <span>D5, D6</span>
+                </div>
+                <div class="summary-item">
+                    <span>Ticket Price (x2):</span>
+                    <span>$24.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Convenience Fee:</span>
+                    <span>$2.50</span>
+                </div>
+                <div class="summary-item summary-total">
+                    <span>Total:</span>
+                    <span>$26.50</span>
+                </div>
+                
+                <button class="btn-continue" id="toPaymentBtn">Continue to Payment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="container">
+        <div class="payment-section" id="paymentSection">
+            <div class="process-header">
+                <h3>Payment Details</h3>
+                <p>Complete your booking by providing payment information</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Select Seats</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Payment</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Confirmation</div>
+                </div>
+            </div>
+            
+            <h3>Select Payment Method</h3>
+            <div class="payment-options">
+                <div class="payment-option selected" data-method="card">
+                    <i class="fas fa-credit-card"></i>
+                    <p>Credit/Debit Card</p>
+                </div>
+                <div class="payment-option" data-method="paypal">
+                    <i class="fab fa-paypal"></i>
+                    <p>PayPal</p>
+                </div>
+                <div class="payment-option" data-method="wallet">
+                    <i class="fas fa-wallet"></i>
+                    <p>Digital Wallet</p>
+                </div>
+            </div>
+            
+            <div class="payment-form">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cardName">Cardholder Name</label>
+                    <input type="text" id="cardName" placeholder="John Doe">
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+                </div>
+                
+                <button class="btn-continue" id="toTicketBtn">Pay Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Ticket Section -->
+    <section class="container">
+        <div class="e-ticket" id="eTicket">
+            <div class="process-header">
+                <h3>Booking Confirmed!</h3>
+                <p>Your e-ticket is ready. You can also find it in your email.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Select Seats</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Payment</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Confirmation</div>
+                </div>
+            </div>
+            
+            <div class="ticket">
+                <div class="ticket-header">
+                    <h3>Spider-Man: No Way Home</h3>
+                    <p>Friday, June 15 • 7:30 PM</p>
+                </div>
+                
+                <div class="ticket-details">
+                    <div class="ticket-detail">
+                        <label>Theater</label>
+                        <span>Cineplex Downtown</span>
+                    </div>
+                    
+                    <div class="ticket-detail">
+                        <label>Screen</label>
+                        <span>Screen 5</span>
+                    </div>
+                    
+                    <div class="ticket-detail">
+                        <label>Seats</label>
+                        <span>D5, D6</span>
+                    </div>
+                    
+                    <div class="ticket-detail">
+                        <label>Ticket ID</label>
+                        <span>SPIDEY67890</span>
+                    </div>
+                </div>
+                
+                <div class="ticket-qr">
+                    <i class="fas fa-qrcode" style="font-size: 5rem; color: #1e293b;"></i>
+                </div>
+                
+                <div class="ticket-footer">
+                    <p>Please arrive at least 30 minutes before the showtime</p>
+                </div>
+            </div>
+            
+            <button class="btn-continue" style="max-width: 300px; margin: 30px auto;">Download E-Ticket</button>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            
+            <div class="form-options">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            
+            <button class="btn-login-modal">Login</button>
+            
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#" id="toSignup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About CineBook</h3>
+                    <p>CineBook is your premier destination for online movie ticket booking. We provide a seamless experience to book tickets for your favorite movies.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">Theaters</a></li>
+                        <li><a href="#">Offers & Promotions</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 CineBook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
